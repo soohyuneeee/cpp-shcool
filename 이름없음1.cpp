@@ -1,14 +1,16 @@
 #include <iostream>
-int main(){
-
-
-    int val1;
-    int val2;
-    int val3;
-    int val4;
-    int val5;
-
-    std::cin>>val1>>val2>>val3>>val4>>val5;
-    std::cout<<val1+val2+val3+val4+val5;
-    return 0;
+using namespace std;
+int numlist[100];
+int fibo(int n){
+	if (n==1) numlist[1]=1;
+	else if (n==2 )numlist[2]=1;
+	else numlist[n]=numlist[n-1]+numlist[n-2];
+	return numlist[n];
 }
+int main(){
+	for(int i=1;i<=10;i++){
+		cout<<i<<"¹ø¤Š Ç× : "<<fibo(i)<<endl;
+	}
+	return 0;
+}
+
